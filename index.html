@@ -28,7 +28,6 @@
 			}).appendTo(main);
 			function addInfo(info,top){
 				$('<span><span>').text(info).css({
-				'font-size': '23px',
 				'position':'absolute',
 				'top':top+'px',
 				'left':'85%'
@@ -60,6 +59,7 @@
 					clearInterval(timer);
 					main.css({
 						"backgroundColor":"gray",
+						'font-size': '23px',
 					});
 					noets();
 				}
