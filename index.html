@@ -71,14 +71,13 @@
 			function noets(){
 				var timer1=setInterval(function(){
 					clearInterval(timer1);
-					document.write("<div id='speak'>肚子好饿，早知道就不学PHP了</div>");
+					$('div').remove();
+					$('span').remove();
+					$("<div id='speak'>肚子好饿，早知道就不学PHP了</div>").appendTo($('body'));
 					var script1 = document.createElement('script');
-					script1.src = 'flow.js';
+					script1.src = './flow.js';
 					var head =document.querySelector('head');
 					head.appendChild(script1);
-					var script2 = document.createElement('script');
-					script2.src = 'jquery-1.12.4.min.js';
-					head.appendChild(script2);
 					$('#speak').css({
 						'font-size': '23px',
 					});
