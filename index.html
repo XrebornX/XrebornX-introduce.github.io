@@ -29,6 +29,7 @@
 			function addInfo(info,top){
 				$('<span><span>').text(info).css({
 				'position':'absolute',
+				'font-size': '23px',
 				'top':top+'px',
 				'left':'85%'
 				}).appendTo(main).animate({'left':'10%'},2000,'linear',function(){
@@ -59,7 +60,6 @@
 					clearInterval(timer);
 					main.css({
 						"backgroundColor":"gray",
-						'font-size': '23px',
 					});
 					noets();
 				}
@@ -78,6 +78,9 @@
 					script1.src = './flow.js';
 					var head =document.querySelector('head');
 					head.appendChild(script1);
+					$('#speak').css({
+						'font-size': '23px',
+					});
 				},2500);
 			}
 		});
