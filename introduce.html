@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.main{
+			position: relative;
+			width: 80%;
+			margin-left: 10%;
+			padding: 0 18px 30px 18px;
+			/*border: 1px solid pink;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+
+	</div>
+	<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="jsonData.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var main = $('.main');
+			$('<p>简历</p>').css({
+				'font-size': '35px',
+				'margin-left':'45%'
+			}).appendTo(main);
+			function addInfo(info,top){
+				$('<span><span>').text(info).css({
+				'font-size': '23px',
+				'position':'absolute',
+				'top':top+'px',
+				'left':'85%'
+				}).appendTo(main).animate({'left':'10%'},2000,'linear',function(){
+					$(this).animate({'left':'15%'},600,'linear',function(){
+					$(this).css({
+						'color': 'darkblue',
+						'margin': '10px',
+						'display': 'block',
+						'position':'',
+						'color': 'black'
+					});
+					})
+				});
+			};
+			addInfo('感谢你的光临，请允许我做个简短的自我介绍',100);
+			function getJsonLength(jsonData){
+				var length = 0;
+				for(var ever in jsonData){
+					length++;
+				}
+				return length;
+			}
+			var i = 1;
+			var length = getJsonLength(infObj);
+			var timer=setInterval(function(){
+				var height = main.height();
+				if(i >= length){
+					clearInterval(timer);
+					main.css({
+						"backgroundColor":"gray",
+					});
+					noets();
+				}
+				var info = infObj['inf'+i];
+				// addInfo(info[0],info[1]);
+				addInfo(info[0],height);
+				i++;
+			},3000);
+			function noets(){
+				var timer1=setInterval(function(){
+					clearInterval(timer1);
+					document.write("<div id='speak'></div>");
+					var script1 = document.createElement('script');
+					script1.src = 'flow.js';
+					var head =document.querySelector('head');
+					head.appendChild(script1);
+					var script2 = document.createElement('script');
+					script2.src = 'jquery-1.12.4.min.js';
+					head.appendChild(script2);
+					$('#speak').css({
+						'font-size': '23px',
+					});
+				},2500);
+			}
+		});
+	</script>
+</body>
+</html>
