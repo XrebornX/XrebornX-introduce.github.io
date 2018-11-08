@@ -33,7 +33,7 @@
 	var introducr4 = '4：具备面向对象开发思想，能够使用TP3.2框架进行MVC模式的开发。';
 	var introducr5 = '5：了解mysql、redis。';
 	var introducr6 = '6：做过OA系统的权限管理功能、分页效果和微信小程序的布局，了解git的一些操作。';
-	var introducr7 = '现希望能从事PHP或者web前端的工作，如果你觉得我可能合适你们公司的话，希望你能给我个机会，如果你们是在招收培训学员的话，我有需要自然会联系你们的，谢谢';
+	var introducr7 = '现希望能从事PHP或者web前端的工作，如果你觉得我可能合适你们公司的话，希望你能给我个尝试的机会，谢谢';
 	var introducr8 = 'QQ：1787139672  　　  email：1787139672@qq.com';
 	function finalWord(intr,col='#1A1A1A',ft=23){
 		$('<span><span>').text(intr).css({
