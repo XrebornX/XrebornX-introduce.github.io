@@ -26,7 +26,7 @@
 		}).slideDown(2500);
 		}
 	}
-	var timer = setInterval('show(demoText)',350);
+	var timer = setInterval('show(demoText)',200);
 	var introducr1 = '1：能使用常用的办公软件、PS 、AutoCAD等。';
 	var introducr2 = '2：熟悉HTML语言，可以结合DIV+CSS对页面进行布局。';
 	var introducr3 = '3：熟悉javascript、jquery，能够通过Ajax实现页面的局部更新和跨域信息的接收，了解session、cookie。';
