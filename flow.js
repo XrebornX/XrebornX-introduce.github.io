@@ -1,4 +1,4 @@
-	var demoText = 'ok,it seems a little hard for a novice to find a job';
+	var demoText = 'ok,it seems a little hard for a novice to find a job....';
 	// var demoText = 'I';
 	var i = 0;
 	function show(word){
